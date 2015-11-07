@@ -1,8 +1,7 @@
 'use strict'
 
 const BigNumber = require('bignumber.js')
-const uuid = require('node-uuid')
-const uuid5 = require('uuid5')
+const uuid = require('uuid-1345')
 
 const ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
@@ -95,6 +94,32 @@ class ShortUUID {
     const factor = new BigNumber(String(Math.log(256) / Math.log(this.length)))
     const length = Math.ceil(factor.times(numBytes).toString())
     return length
+  }
+
+  /**
+   * Generate and return a UUID.
+   *
+   * If the name parameter is provided, set the namespace to the provided
+   * name and generate a UUID.
+   */
+  uuid(name, padToLen) {
+    name = name || ''
+    padToLen = padToLen || 22
+    let id
+    if (name === '') {
+      id = uuid.v4()
+    } else if (name.toLowerCase().startsWith('http')) {
+      id = uuid.v5({
+        namespace: uuid.namespace.url,
+        name: name
+      })
+    } else {
+      id = uuid.v5({
+        namespace: uuid.namespace.dns,
+        name: name
+      })
+    }
+    return this.encode(id, padToLen)
   }
 
 }

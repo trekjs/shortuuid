@@ -1,7 +1,8 @@
 # shortuuid
 
 shortuuid is a simple python library that generates concise, unambiguous,
-URL-safe UUIDs. Based on and compatible with the Python library
+URL-safe UUIDs.   
+Based on and compatible with the Python library
 [shortuuid](https://github.com/stochastic-technologies/shortuuid).
 
 Often, one needs to use non-sequential IDs in places where users will see them,
@@ -22,4 +23,7 @@ su.encode('6ca4f0f8-2508-4bac-b8f1-5d1e3da2247a')
 
 su.decode('cu8Eo9RyrUsV4MXEiDZpLM')
 // => '6ca4f0f8-2508-4bac-b8f1-5d1e3da2247a'
+
+su.uuid()
+// => 'cu8Eo9RyrUsV4MXEiDZpLM'
 ```
