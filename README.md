@@ -26,6 +26,12 @@ su.decode('cu8Eo9RyrUsV4MXEiDZpLM')
 
 su.uuid()
 // => 'cu8Eo9RyrUsV4MXEiDZpLM'
+
+su.uuid('example.com')
+// => 'wpsWLdLt9nscn2jbTD3uxe'
+
+su.uuid('http://example.com')
+// => 'c8sh5y9hdSMS6zVnrvf53T'
 ```
 
 [uuid-1345]: https://github.com/scravy/uuid-1345
