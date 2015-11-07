@@ -1,0 +1,27 @@
+{
+  "name": "shortuuid",
+  "version": "0.0.0",
+  "description": "A generator library for concise, unambiguous and URL-safe UUIDs",
+  "repository": "trekjs/shortuuid",
+  "author": "Fangdun Cai <cfddream@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "test": "mocha --bail --check-leaks test"
+  },
+  "dependencies": {
+    "bignumber.js": "^2.1.0",
+    "node-uuid": "^1.4.3",
+    "uuid5": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "files": [
+    "LICENSE",
+    "index.js"
+  ]
+}
