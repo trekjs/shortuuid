@@ -7,7 +7,7 @@ Based on and compatible with the Python library
 
 Often, one needs to use non-sequential IDs in places where users will see them,
 but the IDs must be as concise and easy to use as possible. shortuuid solves
-this problem by generating uuids using Python's built-in uuid module and then
+this problem by generating uuids using [uuid-1345][] and then
 translating them to base57 using lowercase and uppercase letters and digits,
 and removing similar-looking characters such as l, 1, I, O and 0.
 
@@ -27,3 +27,5 @@ su.decode('cu8Eo9RyrUsV4MXEiDZpLM')
 su.uuid()
 // => 'cu8Eo9RyrUsV4MXEiDZpLM'
 ```
+
+[uuid-1345]: https://github.com/scravy/uuid-1345
