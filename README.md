@@ -42,7 +42,7 @@ su.uuid('http://example.com')
 
 [uuid-1344]: https://github.com/scravy/uuid-1345
 
-[npm-img]: https://img.shields.io/npm/v/trek-shortuuid.svg?style=flat-square
+[npm-img]: https://img.shields.io/npm/v/shortuuid.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/shortuuid
 [travis-img]: https://img.shields.io/travis/trekjs/shortuuid.svg?style=flat-square
 [travis-url]: https://travis-ci.org/trekjs/shortuuid
