@@ -12,6 +12,10 @@ describe('ShortUUID#uuid()', () => {
   })
 
   it('should generate with uuid v4', () => {
+    assert.ok(su.uuid().length > 0)
+  })
+
+  it('should generate with uuid v5 and dns namespace', () => {
     assert.ok(su.uuid('example.com') === 'wpsWLdLt9nscn2jbTD3uxe')
   })
 
