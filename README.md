@@ -40,7 +40,7 @@ su.uuid('http://example.com')
 // => 'c8sh5y9hdSMS6zVnrvf53T'
 ```
 
-[uuid-1344]: https://github.com/scravy/uuid-1345
+[uuid-1345]: https://github.com/scravy/uuid-1345
 
 [npm-img]: https://img.shields.io/npm/v/shortuuid.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/shortuuid
