@@ -130,7 +130,7 @@ module.exports = class ShortUUID {
   random(len) {
     len = len || 22
     const randomStr = crypto.randomBytes(20).toString('hex')
-    const num = new BigNumber(randomStr, 16);
+    const num = new BigNumber(randomStr, 16)
     return this._numToString(num.toString(), len).substring(0, len)
   }
 
