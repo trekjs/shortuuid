@@ -1,6 +1,6 @@
 {
   "name": "shortuuid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A generator library for concise, unambiguous and URL-safe UUIDs",
   "repository": "trekjs/shortuuid",
   "author": "Fangdun Cai <cfddream@gmail.com>",
