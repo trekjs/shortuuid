@@ -38,6 +38,12 @@ su.uuid('example.com')
 
 su.uuid('http://example.com')
 // => 'c8sh5y9hdSMS6zVnrvf53T'
+
+su.random()
+// => 'c8sh5y9hdSMS6zVnrvf53T'
+
+su.random(10)
+// => 'c8sh5y9hdS'
 ```
 
 [uuid-1345]: https://github.com/scravy/uuid-1345
