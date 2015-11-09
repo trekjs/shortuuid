@@ -1,11 +1,12 @@
 'use strict'
 
 const BigNumber = require('bignumber.js')
+const crypto = require('crypto')
 const uuid = require('uuid-1345')
 
 const ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
-class ShortUUID {
+module.exports = class ShortUUID {
 
   constructor(alphabet) {
     alphabet = alphabet || ALPHABET
@@ -122,6 +123,15 @@ class ShortUUID {
     return this.encode(id, padToLen)
   }
 
-}
+  /**
+   * Generate and return a cryptographically-secure short random string
+   * of the specified length.
+   */
+  random(len) {
+    len = len || 22
+    const randomStr = crypto.randomBytes(20).toString('hex')
+    const num = new BigNumber(randomStr, 16);
+    return this._numToString(num.toString(), len).substring(0, len)
+  }
 
-module.exports = ShortUUID
+}
